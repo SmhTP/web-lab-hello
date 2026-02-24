@@ -1,74 +1,110 @@
+/* Temel Sayfa Yapısı */
 body {
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigasyon */
+nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f0f2f5;
-  font-family: Arial, sans-serif;
+  gap: 20px;
+  background: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
-.lab-container {
-  background-color: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-h1 {
-  color: #2c3e50;
-  margin-bottom: 10px;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-h2 {
-  color: #34495e;
-  margin-bottom: 30px;
-}
-
-p {
-  color: #333333;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 10px 0;
-}
-.personal-info {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #e0e0e0;
-  text-align: left;
-}
-
-.personal-info h3 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.personal-info p {
-  font-size: 15px;
-  margin: 8px 0;
-  color: #444;
-}
-/* Ana içeriğe atla bağlantısını normalde gizle */
+/* Erişilebilirlik: Skip Link */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 0;
-  background: #2c3e50;
+  background: #e74c3c;
   color: white;
-  padding: 8px;
-  z-index: 100;
-  transition: top 0.3s;
-  text-decoration: none;
+  padding: 10px;
+  z-index: 1000;
+  transition: top 0.2s;
 }
 
-/* Tab ile odaklandığında görünür yap */
 .skip-link:focus {
   top: 0;
 }
 
-/* Adım 2: Odak göstergesini (outline) belirginleştirme */
-a:focus, button:focus {
+/* Görseller */
+img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Form Tasarımı */
+fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
+  min-height: 18px;
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Odaklanma Efekti */
+*:focus {
   outline: 3px solid #3498db;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
