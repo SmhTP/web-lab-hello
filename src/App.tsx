@@ -12,7 +12,7 @@ function App() {
         <h3>Hakkımda</h3>
         <p><strong>Bölüm:</strong> Yazılım Mühendisliği</p>
         <p><strong>İlgi Alanları:</strong> Full-Stack & Mobil Geliştirme, 2D Pixel-Art Oyunlar, Oto Beyin Yazılımları</p>
-        <p><strong>Güncel Projeler:</strong> Trafik Sosyal Uygulaması, İlk Adım Futbol Okulu</p>
+        <p><strong>Güncel Projeler:</strong> Trafik Sosyal Uygulaması</p>
       </div>
     </div>
   );
