@@ -1,37 +1,129 @@
-/* Mevcut CSS'e ek olarak listeler ve sosyal linkler için: */
-#hakkimda ul {
-  text-align: left;
-  display: inline-block;
-  margin-top: 10px;
+/* 1. Genel Sifirlama */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+body { 
+  font-family: system-ui, -apple-system, sans-serif; /* Apple cihazlar için sistem fontu */
+  line-height: 1.6; 
+  background-color: #f8fafc;
+  color: #1e293b;
 }
 
-.project-card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.social-links {
-  margin-top: 10px;
-}
-
-.social-links a {
-  color: #3498db;
+/* 2. Skip Link: Normalde gizli, Tab ile gorunur */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #2563EB;
+  color: white;
+  padding: 1rem;
+  z-index: 100;
   text-decoration: none;
-  font-weight: bold;
+  transition: top 0.2s ease;
 }
 
-.logo {
-  font-size: 24px;
+.skip-link:focus { 
+  top: 0; 
+}
+
+/* 3. Focus Gostergesi - Erişilebilirlik için kritik */
+:focus { 
+  outline: 2px solid #2563EB; 
+  outline-offset: 2px; 
+}
+
+/* Layout Düzenlemeleri */
+header, main, footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2563EB;
+  font-weight: 600;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* 4. Form Stilleri */
+.form-group { 
+  margin-bottom: 1rem; 
+}
+
+label { 
+  display: block; 
+  margin-bottom: 0.25rem; 
+  font-weight: 500;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+.error-msg { 
+  color: #dc2626; 
+  font-size: 0.85rem; 
+  margin-top: 0.25rem;
+}
+
+.submit-btn {
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
   font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 10px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Görsel Düzenleme */
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.5rem;
 }
