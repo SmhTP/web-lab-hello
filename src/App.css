@@ -1,4 +1,4 @@
-/* 1. Genel Sifirlama */
+/* 1. Genel sifirlama */
 * { 
   margin: 0; 
   padding: 0; 
@@ -6,20 +6,20 @@
 }
 
 body { 
-  font-family: system-ui, -apple-system, sans-serif; /* Apple cihazlar için sistem fontu */
+  font-family: system-ui, -apple-system, sans-serif; 
   line-height: 1.6; 
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #f4f4f5;
+  color: #18181b;
 }
 
-/* 2. Skip Link: Normalde gizli, Tab ile gorunur */
+/* 2. Skip link: normalde gizli, Tab ile gorunur */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 0;
-  background: #2563EB;
+  background: #1E3A8A; /* Föydeki lacivert renk */
   color: white;
-  padding: 1rem;
+  padding: 8px 16px; /* Föydeki tam değerler */
   z-index: 100;
   text-decoration: none;
   transition: top 0.2s ease;
@@ -29,46 +29,46 @@ body {
   top: 0; 
 }
 
-/* 3. Focus Gostergesi - Erişilebilirlik için kritik */
+/* 3. Focus gostergesi -- ASLA kaldirma */
 :focus { 
-  outline: 2px solid #2563EB; 
+  outline: 2px solid #2563EB; /* Föydeki mavi renk */
   outline-offset: 2px; 
 }
 
-/* Layout Düzenlemeleri */
+/* Layout & Sayfa Yapısı */
 header, main, footer {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 20px;
+}
+
+header {
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 20px;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 15px;
+  list-style: none;
+  margin-top: 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: #2563EB;
+  color: #1E3A8A;
   font-weight: 600;
 }
 
 section {
-  margin-bottom: 3rem;
-  padding: 2rem;
   background: white;
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
-h1, h2, h3 {
-  margin-bottom: 1rem;
-  color: #0f172a;
-}
-
-/* 4. Form Stilleri */
+/* 4. Form stilleri */
 .form-group { 
   margin-bottom: 1rem; 
 }
@@ -81,49 +81,42 @@ label {
 
 input, textarea, select {
   width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #cbd5e1;
+  padding: 0.5rem; /* Föydeki tam değer */
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  background-color: #ffffff;
 }
 
 .error-msg { 
-  color: #dc2626; 
+  color: red; 
   font-size: 0.85rem; 
-  margin-top: 0.25rem;
 }
 
-.submit-btn {
-  background-color: #2563EB;
+button[type="submit"] {
+  background-color: #1E3A8A;
   color: white;
+  padding: 10px 20px;
   border: none;
-  padding: 0.75rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
   width: 100%;
+  font-weight: bold;
 }
 
-.submit-btn:hover {
-  background-color: #1d4ed8;
+button[type="submit"]:hover {
+  background-color: #2563EB;
 }
 
-/* Görsel Düzenleme */
-figure {
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
+/* Resim ve Liste Düzenlemeleri */
 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  border: 1px solid #e2e8f0;
+  max-width: 180px;
+  border-radius: 8px;
+  margin: 15px 0;
 }
 
-figcaption {
+footer {
+  text-align: center;
   font-size: 0.9rem;
   color: #64748b;
-  margin-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
 }
