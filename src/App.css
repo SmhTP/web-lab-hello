@@ -31,3 +31,21 @@ p {
   font-weight: 500;
   margin: 10px 0;
 }
+.personal-info {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.personal-info h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.personal-info p {
+  font-size: 15px;
+  margin: 8px 0;
+  color: #444;
+}
