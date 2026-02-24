@@ -13,6 +13,8 @@ Bu proje, Web Tasarimi ve Programlama dersi LAB-1 kapsaminda Vite + React + Type
 - Vite
 
 ## Kurulum
+
 ```bash
 npm install
-![Lighthouse Erişilebilirlik Skoru](./lighthouse-score.png)
+```
+![Lighthouse Skoru](./public/lighthouse-score.png)
