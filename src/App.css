@@ -1,110 +1,37 @@
-/* Temel Sayfa Yapısı */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
-  line-height: 1.6;
+/* Mevcut CSS'e ek olarak listeler ve sosyal linkler için: */
+#hakkimda ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-header, main, footer {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Navigasyon */
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  background: #2c3e50;
-  padding: 10px 20px;
-  border-radius: 8px;
+  margin-top: 20px;
 }
 
-nav ul li a {
-  color: white;
+.project-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #3498db;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Erişilebilirlik: Skip Link */
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  background: #e74c3c;
-  color: white;
-  padding: 10px;
-  z-index: 1000;
-  transition: top 0.2s;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
-/* Görseller */
-img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
-  display: block;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
   margin-bottom: 10px;
-}
-
-/* Form Tasarımı */
-fieldset {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 12px;
-  background: white;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-input, select, textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-.error-msg {
-  color: #e74c3c;
-  font-size: 13px;
-  margin-top: 5px;
-  min-height: 18px;
-}
-
-.submit-btn {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  width: 100%;
-}
-
-.submit-btn:hover {
-  background-color: #2980b9;
-}
-
-/* Odaklanma Efekti */
-*:focus {
-  outline: 3px solid #3498db;
-  outline-offset: 3px;
 }
