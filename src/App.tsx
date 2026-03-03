@@ -3,11 +3,11 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* 1. Header ve Navigasyon */}
       <a href="#main-content" className="skip-link">Ana icerige atla</a>
       
+      {/* ===== HEADER & NAVIGASYON (Flexbox) ===== */}
       <header>
-        <div className="logo">Semih Tepe</div>
+        <div className="site-title">Semih Tepe</div>
         <nav aria-label="Ana navigasyon">
           <ul>
             <li><a href="#hakkimda">Hakkimda</a></li>
@@ -18,48 +18,61 @@ function App() {
       </header>
 
       <main id="main-content">
-        {/* 2. Hakkimda Bölümü */}
+        
+        {/* ===== HAKKIMDA BOLUMU ===== */}
         <section id="hakkimda">
           <h2>Hakkimda</h2>
-          <figure>
-            <img src="profil.jpg" alt="Semih Tepe'nin vesikalik fotografi" />
-            <figcaption>Semih Tepe - Yazılım Mühendisi Adayı</figcaption>
-          </figure>
-          <p>
-            Fırat Üniversitesi Yazılım Mühendisliği öğrencisiyim. 
-            Tam yığın (full-stack) web geliştirme ve mobil uygulamalar üzerine çalışıyorum.
-          </p>
-          <h3>Kullandigim Teknolojiler</h3>
-          <ul>
-            <li>React & Next.js</li>
-            <li>TypeScript</li>
-            <li>Flutter</li>
-            <li>Godot (Oyun Geliştirme)</li>
-            <li>Tailwind CSS</li>
-          </ul>
-        </section>
-
-        {/* 3. Projelerim Bölümü */}
-        <section id="projeler">
-          <h2>Projelerim</h2>
-          <div className="project-grid">
-            <article className="project-card">
-              <h3>Trafik Sosyal</h3>
-              <p>Capacitor ve Next.js kullanılarak geliştirilmiş, trafik tabanlı bir sosyal ağ projesi.</p>
-              <p><strong>Teknolojiler:</strong> Next.js, TypeScript, Capacitor</p>
-              <img src="trafik-sosyal.png" alt="Trafik Sosyal uygulamasının arayüzü" />
-            </article>
-
-            <article className="project-card">
-              <h3>PRNG Xorshift</h3>
-              <p>Düşük kaynak tüketimiyle yüksek kaliteli rastgele sayılar üreten Xorshift algoritması uygulaması.</p>
-              <p><strong>Teknolojiler:</strong> C++, Git</p>
-              <img src="prng-project.png" alt="Xorshift algoritması çalışma mantığı grafiği" />
-            </article>
+          <div className="about-content">
+            <figure>
+              <img src="profil.jpg" alt="Semih Tepe'nin vesikalik fotografi" />
+              <figcaption>Semih Tepe - Yazılım Mühendisi Adayı</figcaption>
+            </figure>
+            <div>
+              <p>Fırat Üniversitesi Yazılım Mühendisliği öğrencisiyim. Tam yığın (full-stack) web geliştirme ve mobil uygulamalar üzerine çalışıyorum.</p>
+              
+              <h3>Kullandigim Teknolojiler</h3>
+              {/* Flexbox Toolbar (Uygulama-5) */}
+              <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+                <li>React & Next.js</li>
+                <li>TypeScript</li>
+                <li>Flutter</li>
+                <li>Godot (Oyun Geliştirme)</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* 4. İletişim Bölümü (Uygulama-4 Formu Dahil) */}
+        {/* ===== PROJELER BOLUMU ===== */}
+        <section id="projeler">
+          <h2>Projelerim</h2>
+          <div className="project-grid">
+            
+            <article className="project-card">
+              <img src="trafik-sosyal.png" alt="Trafik Sosyal mobil uygulamasının arayüzü" />
+              <h3>Trafik Sosyal</h3>
+              <p>Next.js ve Capacitor kullanılarak geliştirilmiş, trafik tabanlı bir sosyal ağ projesi.</p>
+              <ul className="skill-tags">
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Capacitor</li>
+              </ul>
+            </article>
+
+            <article className="project-card">
+              <img src="prng-project.png" alt="Xorshift algoritması çalışma grafiği" />
+              <h3>PRNG Xorshift</h3>
+              <p>Düşük kaynak tüketimiyle yüksek kaliteli rastgele sayılar üreten Xorshift algoritması uygulaması.</p>
+              <ul className="skill-tags">
+                <li>Python</li>
+                <li>Algoritma</li>
+              </ul>
+            </article>
+
+          </div>
+        </section>
+
+        {/* ===== ILETISIM BOLUMU ===== */}
         <section id="iletisim">
           <h2>Iletisim</h2>
           <form action="#" method="POST" noValidate>
@@ -76,6 +89,16 @@ function App() {
                 <small id="email-error" className="error-msg" role="alert"></small>
               </div>
               <div className="form-group">
+                <label htmlFor="subject">Konu:</label>
+                <select id="subject" name="subject" required aria-describedby="subject-error">
+                  <option value="">-- Seciniz --</option>
+                  <option value="is">Is Teklifi</option>
+                  <option value="soru">Soru</option>
+                  <option value="oneri">Oneri</option>
+                </select>
+                <small id="subject-error" className="error-msg" role="alert"></small>
+              </div>
+              <div className="form-group">
                 <label htmlFor="message">Mesajiniz:</label>
                 <textarea id="message" name="message" rows={5} required minLength={10} aria-describedby="message-error"></textarea>
                 <small id="message-error" className="error-msg" role="alert"></small>
@@ -86,12 +109,8 @@ function App() {
         </section>
       </main>
 
-      {/* 5. Footer */}
       <footer>
         <p>&copy; 2026 Semih Tepe. Tüm hakları saklıdır.</p>
-        <div className="social-links">
-          <a href="https://github.com/SmhTP" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
       </footer>
     </>
   );
